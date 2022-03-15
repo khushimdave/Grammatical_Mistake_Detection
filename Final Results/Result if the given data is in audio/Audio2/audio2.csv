@@ -1,0 +1,6 @@
+,Error Length,Message,Replacement,Sentence
+0,12,This sentence does not start with an uppercase letter.,['Acknowledged'],acknowledged our marketing service forwarder Hamas s...
+1,5,Possible spelling mistake found.,"['Omar', 'Tomas', 'To mar', 'Tamar', 'Tomás']","...keting service forwarder Hamas speaking Tomar cronicas, a product on Google, is right..."
+2,8,Possible spelling mistake found.,"['conical', 'cornices', 'cronies', 'cryonics', 'conics', 'ironical']","... service forwarder Hamas speaking Tomar cronicas, a product on Google, is right and to t..."
+3,2,Three successive sentences begin with the same word. Consider rewording the sentence or use a thesaurus to find a synonym.,[],"...ike, have already wanted out with them. So I know Dona number and in future, any r..."
+4,9,The phrase ‘in future’ is British English. Did you mean: “in the future”?,['in the future'],"...ut with them. So I know Dona number and in future, any requirement to the African just an..."
