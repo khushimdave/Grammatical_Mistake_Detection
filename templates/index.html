@@ -1,1 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VideoObjectDetection</title>
+    <script LANGUAGE="JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js">
+        function hide_text()
+        {
+            var ele = document.getElementById("text1");
+            ele.style.display = "Processing.............";
+        }
+    </script>
+    <style>
+    .form {
+      max-width: 500px;
+      margin: auto;
+      padding: 46.5px;
+      font-size: x-large;
+      font-style: initial;
+      font-family: -webkit-pictograph;
+      border-color: grey;
+      border-width: thick;
+      border-style: inset;
+      text-align:center;
+      background-color: white;
+      opacity: 0.8;
+    }
+    .video {
+      max-width: 1200px;
+      margin: auto;
+      font-style: initial;
+      font-family: courier;
+      text-align:center;
+    }
+    body{
+    background-color: #cccccc;
+    background-image: linear-gradient(cadetblue,cornsilk,cadetblue);
+    }
 
+    h3{
+      max-width: 1200px;
+      margin: auto;
+      font-style: initial;
+      font-family: courier;
+      text-align:center;
+    
+    }
+
+    .punctable{
+        border-style: groove;
+    max-width: 700px;
+    padding: 46.5px;
+    text-align: center;
+    margin: auto;
+    font-size: x-large;
+    font-style: initial;
+    font-family: -webkit-pictograph;
+    }
+
+    .transcript{
+        border-style: double;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    font-size: x-large;
+    font-style: initial;
+    font-family: -webkit-pictograph;
+    }
+
+    .speechtotext{
+        text-align: center;
+    font-size: xx-large;
+    font-style: initial;
+    }
+    </style>
+
+</head>
+
+<body>
+<div class="form">
+    <h3>Online Grammer Checker</h3>
+    <form action="/" class="d-flex" method="POST" enctype=multipart/form-data>
+        <label class="form-label" for="customFile">Upload your file here</label><br>
+        <input type="file" class="form-control" id="customFile" name="file" /><br>
+        <button class="btn btn-outline-success" type="submit" onclick="hide_text();">SUBMIT</button><br><br>
+        <a href="{{ csv }}" download>DOWNLOAD FILE FROM HERE</a>
+    </form>
+</div>
+<h3 id="text1"></h3>
+<div class="video">
+    <table class="centered thick-border">
+            {% for table in tables %}
+                {{titles[loop.index]}}
+                {{ table|safe }}
+            {% endfor %}
+    </table>
+</div>
+<br>
+<br>
+<br>
+<div class="speechtotext">
+SPEECH TO TEXT 
+</div>
+<div class="transcript">
+{{ transcript }}
+
+</div>
+<br>
+<br>
+<br>
+<div class="punctable">
+    {% for foo in foobar %}
+        {{foo_titles[loop.index]}}
+        {{ foo|safe }}
+    {% endfor %}
+</div>
+
+</body>
+</html>
